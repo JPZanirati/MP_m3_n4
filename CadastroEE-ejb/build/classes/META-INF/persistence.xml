@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="3.1" xmlns="https://jakarta.ee/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_1.xsd">
+  <persistence-unit name="CadastroEE-ejbPU" transaction-type="JTA">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>cadastroee.model.Pessoa</class>
+    <class>cadastroee.model.PessoaFisica</class>
+    <class>cadastroee.model.Produto</class>
+    <class>cadastroee.model.ProdutoMovimento</class>
+    <class>cadastroee.model.Usuario</class>
+    <jta-data-source>jdbc/loja</jta-data-source>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://localhost:1433;databaseName=LOJA"/>
+      <property name="javax.persistence.jdbc.user" value="loja"/>
+      <property name="javax.persistence.jdbc.password" value="loja"/>
+      <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+    </properties>
+  </persistence-unit>
+</persistence>
